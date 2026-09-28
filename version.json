@@ -1,0 +1,6 @@
+{
+  "versionCode": 9,
+  "versionName": "0.2.5",
+  "apkUrl": "https://raw.githubusercontent.com/burnt424-oss/hands/main/releases/hands-0.2.5.apk",
+  "notes": "In-app updater: the app now checks for updates itself and walks you through installing them. Also: bright-yellow driving dot, version number on the main screen, working action-ledger viewer."
+}
