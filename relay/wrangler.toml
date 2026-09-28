@@ -1,0 +1,13 @@
+# Cloudflare Workers Build (git-connected) config for the hands-relay message relay.
+# Dashboard: hands-relay worker -> Settings -> Builds -> Git repository -> Connect,
+# production branch main, root directory "relay", no build command,
+# deploy command "npx wrangler deploy".
+# The RELAY_SECRET secret and RELAY_KV binding are managed in the dashboard and
+# persist across git deploys; the KV namespace id below must match the dashboard.
+name = "hands-relay"
+main = "worker.js"
+compatibility_date = "2026-09-27"
+
+[[kv_namespaces]]
+binding = "RELAY_KV"
+id = "dcc29235d2b842fab600c20d86da6dc5"
