@@ -1,6 +1,7 @@
 {
-  "versionCode": 12,
-  "versionName": "0.2.8",
-  "apkUrl": "https://raw.githubusercontent.com/burnt424-oss/hands/main/releases/hands-0.2.8.apk",
-  "notes": "Fixes the driving indicator trigger: it now fires on every command the phone receives (bubble, taps, reads), not just when Chrome is in the foreground."
+  "versionCode": 13,
+  "versionName": "0.3.0",
+  "apkUrl": "https://raw.githubusercontent.com/burnt424-oss/hands/main/releases/hands-0.3.0.apk",
+  "relayUrl": "https://hands-relay.burnt424.workers.dev",
+  "notes": "Switches the phone relay from webhook.site to Brent's own Cloudflare Worker relay — no more rate-limit stalls. The app picks up the relay address from this file automatically."
 }
