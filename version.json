@@ -1,6 +1,6 @@
 {
-  "versionCode": 11,
-  "versionName": "0.2.7",
-  "apkUrl": "https://raw.githubusercontent.com/burnt424-oss/hands/main/releases/hands-0.2.7.apk",
-  "notes": "Driving indicator now visible everywhere: yellow dot when the bubble is closed, yellow 'driving' header plus yellow card border when it's open."
+  "versionCode": 12,
+  "versionName": "0.2.8",
+  "apkUrl": "https://raw.githubusercontent.com/burnt424-oss/hands/main/releases/hands-0.2.8.apk",
+  "notes": "Fixes the driving indicator trigger: it now fires on every command the phone receives (bubble, taps, reads), not just when Chrome is in the foreground."
 }
