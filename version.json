@@ -1,6 +1,6 @@
 {
-  "versionCode": 9,
-  "versionName": "0.2.5",
-  "apkUrl": "https://raw.githubusercontent.com/burnt424-oss/hands/main/releases/hands-0.2.5.apk",
-  "notes": "In-app updater: the app now checks for updates itself and walks you through installing them. Also: bright-yellow driving dot, version number on the main screen, working action-ledger viewer."
+  "versionCode": 11,
+  "versionName": "0.2.7",
+  "apkUrl": "https://raw.githubusercontent.com/burnt424-oss/hands/main/releases/hands-0.2.7.apk",
+  "notes": "Driving indicator now visible everywhere: yellow dot when the bubble is closed, yellow 'driving' header plus yellow card border when it's open."
 }
