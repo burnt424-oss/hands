@@ -1,7 +1,7 @@
 {
-  "versionCode": 13,
-  "versionName": "0.3.0",
-  "apkUrl": "https://raw.githubusercontent.com/burnt424-oss/hands/main/releases/hands-0.3.0.apk",
+  "versionCode": 14,
+  "versionName": "0.4.0",
+  "apkUrl": "https://raw.githubusercontent.com/burnt424-oss/hands/main/releases/hands-0.4.0.apk",
   "relayUrl": "https://hands-relay.burnt424.workers.dev",
-  "notes": "Switches the phone relay from webhook.site to Brent's own Cloudflare Worker relay — no more rate-limit stalls. The app picks up the relay address from this file automatically."
+  "notes": "Bubble overhaul: messages now expand so text is visible immediately (the v0.2/v0.3 bare-dot is why Brent never saw anything), inline reply to chat back, and a genuine STOP button on the bubble. New drive-anywhere toggle (default OFF) lets Hands drive any app incl. the system photo picker; password typing is now refused in code. Faster: adaptive polling (2s while driving, 15s idle) and a batch command that runs many steps in one round trip. Agent side: hands.py gains replies, find, tap-text, fill, scroll-find."
 }

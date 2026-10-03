@@ -17,6 +17,13 @@ export default {
       return reply({commands: q.filter(c => c.i > since),
         cursor: q.length ? q[q.length - 1].i : since});
     }
+    if (request.method === 'GET' && url.pathname === '/inbox') {
+      // Phone-initiated messages (bubble replies, STOP) land here via /res
+      // but are never in the agent's outstanding-command map, so the agent
+      // polls this index instead of guessing result ids.
+      const idx = await kv.get('rindex', 'json') || [];
+      return reply({results: idx});
+    }
     if (request.method === 'GET' && url.pathname === '/result') {
       const id = url.searchParams.get('id');
       if (!id) return reply({error: 'id'}, 400);
@@ -31,6 +38,10 @@ export default {
           typeof body.blob !== 'string') return reply({error: 'envelope'}, 400);
       if (url.pathname === '/res') {
         await kv.put(`r:${body.id}`, body.blob, {expirationTtl: EXPIRED});
+        const idx = await kv.get('rindex', 'json') || [];
+        idx.unshift({id: body.id, ts: Date.now()});
+        await kv.put('rindex', JSON.stringify(idx.slice(0, 100)),
+          {expirationTtl: EXPIRED});
       } else {
         const q = await kv.get('q', 'json') || [];
         // Retries must not insert duplicate envelopes.
